@@ -1,0 +1,91 @@
+/*
+ * Default theme: the baseline the ThemePanel compares against.
+ * Edit these values to change the project defaults. To customise ONE report,
+ * use the ThemePanel: it writes only the differences to custom/variables/vars.css.
+ */
+
+:root {
+  /* Themed colours (overridden below for .dark) */
+  --c-text: #3b2924;
+  --c-text-muted: #795f55;
+  --c-text-on-accent: #fffaf5;
+
+  --c-bg-page: #e8ddd3;
+  --c-bg-surface: #fffaf5;
+  --c-bg-soft: #f4e9df;
+  --c-bg-muted: #eadbd0;
+
+  --c-primary: #b65336;
+  --c-primary-hover: #98432c;
+  --c-secondary: #d98b45;
+  --c-secondary-hover: #bc7135;
+  --c-accent-soft: #f1d6bf;
+
+  --c-error: #b42318;
+  --c-warning: #a15c00;
+  --c-info: #8a5a2b;
+  --c-success: #3f7d3a;
+
+  --c-border: #dec9ba;
+  --c-border-strong: #cda995;
+
+  --c-shadow: rgb(74 42 29 / 18%);
+  --shadow-soft: 0 4px 14px var(--c-shadow);
+
+  /* Not theme-dependent */
+  --text-body: 1.2rem;
+  --text-h1: 1.8rem;
+  --text-h2: 1.6rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.4rem;
+  --text-h5: 1.35rem;
+  --text-h6: 1.3rem;
+
+  --font-body: "Segoe UI", sans-serif;
+  --font-code: "Fira Code", "Consolas", monospace;
+
+  --shadow-medium: 0 10px 40px rgb(74 42 29 / 22%);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+
+  /* Shiki themes. No !important: it would make vars.css unable to override them. */
+  --code-theme-light: catppuccin-latte;
+  --code-theme-dark: github-dark;
+}
+
+.dark {
+  --c-text: #f5e9df;
+  --c-text-muted: #c8aa98;
+
+  --c-bg-page: #241b18;
+  --c-bg-surface: #30231f;
+  --c-bg-soft: #3b2a24;
+  --c-bg-muted: #4a342b;
+
+  --c-primary: #d87852;
+  --c-primary-hover: #ed9067;
+  --c-secondary: #e5a35d;
+  --c-secondary-hover: #f0b66f;
+  --c-accent-soft: #694338;
+
+  --c-border: #5a4035;
+  --c-border-strong: #795344;
+
+  --c-shadow: rgb(0 0 0 / 35%);
+}

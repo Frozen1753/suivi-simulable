@@ -1,0 +1,22 @@
+{
+  "excludeExtensions": [
+    ".gif",
+    ".mp4",
+    ".m4v",
+    ".mov",
+    ".webm",
+    ".ogv",
+    ".avi",
+    ".mkv",
+    ".mp3",
+    ".m4a",
+    ".aac",
+    ".wav",
+    ".ogg",
+    ".opus",
+    ".flac"
+  ],
+  "maxImageWidth": 3000,
+  "maxAssetSizeMb": 5,
+  "excludeFiles": []
+}

@@ -1,0 +1,6 @@
+.term {
+  text-decoration: underline dotted var(--c-primary);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  cursor: help;
+}
