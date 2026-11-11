@@ -8,6 +8,8 @@ import {
     Tabs,
     Term
 } from "report-maker";
+import IgSimulable1 from "./assets/SimeLABle_identite_graphique_1.png";
+import IgSimulable2 from "./assets/SimeLABle_identite_graphique_2.png";
 
 # Présentation du document de suivi
 
@@ -41,33 +43,160 @@ Bonne lecture.
 
 # Mois de Septembre
 
-<Collapsible>
+<Collapsible open>
 
 ## Semaines (1-30sep.)
 
-### Bilan de réunions
+### Description
 
-Pas de réunions, nous nous voyons suffisament durant les cours pour être au courant des activités des autres.
+Sur le premier mois, aucune réunion n'a été faite en raison de notre présence commune à l'IUT, nous étions donc au courant des faits des uns et des autres.
+Durant ces semaines nous suivions les cours, et avancions dans le projet à notre rythme durant les heures d'SEA comme à la maison.
+<br/>
+
+Les semaines ont été marquées par l'assignation des responsabilités/roles de chacun ainsi que la réalisation de la Note de Cadrage.
+
+<table>
+    <tr>
+        <th>Membre</th>
+        <th>Rôle / responsabilités principales</th>
+    </tr>
+    <tr>
+        <td>Eliot NADOUCE BOUROTTE</td>
+        <td>
+            - Gestion de l'identité graphique et artistique du projet.
+            - Outil de production de rapports pour le projet
+            - Développement et optimisation du moteur et de la logique de simulation
+            - Développement et optimisation de l'interpreteur graphique de simulation
+        </td>
+    </tr>
+    <tr>
+        <td>Noah GAUCHE PEREIRA</td>
+        <td>
+            - Études et gestion de l'architecture technique générale du projet
+            - Responsable de la sécurité et robustesse du projet
+            - Conception et optimisation de la base de données.
+            - Développement du backend.
+        </td>
+    </tr>
+    <tr>
+        <td>Grigor GASPARYAN</td>
+        <td>
+            - Coordination générale du projet
+            - Développement du frontend
+        </td>
+    </tr>
+</table>
+
 
 ### Assignation des taches
 
-| Tâche / Objectif | Responsable | Statut |
-| ---| --- | ---: |
-| Veilles/Études stack du projet | Noah, Eliot | En cours |
-| Report Maker | Eliot, Noah | En cours |
-| Figma | Eliot, Grigor  | En cours |
-| Schéma BDD | Noah | En cours |
-| Readaction document de cadrage | Toute l'équipe | En cours |
+Voici les taches majeures durant le mois
+
+| Tâche / Objectif | Responsable(s) | Statut | Progression/Completion |
+| ---| --- | :---: | ---: |
+| Veilles/Études stack du projet | Noah, Eliot | Terminé | Début septembre |
+| Identité graphique | Eliot | Terminé | Début septembre |
+| Report Maker | Eliot, Noah | En cours | estimation: 30% |
+| Maquettes | Eliot, Grigor | En cours | estimation: 30% |
+| Schéma BDD | Noah | En cours | estimation: 80% |
+| [Rendu] Document de cadrage | Toute l'équipe | Terminé | Fin septembre |
 
 ### Progression des tâches
 
+Voici la section de la progression de chaque membre. Une explication de leur travail et de leur progression, avec description plus personnelle
+
 #### Eliot
 
-- Report Maker
-- Veilles technologique pour l'engine, (assisté par [Noah](#Noah))
-- Etudes prix/couts
-- Etudes "concurents" (projet similaires)
-- Redaction document de cadrage
+<u><b>Identité Graphique</b></u><br/>
+L'identité graphique a été terminée dès le premier jour.
+J'ai pu designer l'icône et le logo, faire le choix du thème, des couleurs, du slogan, des polices d'écriture, etc.
+Ainsi, le projet a trouvé son nom : "SimuLABle" (Simulation Ludique d'Automate en Bac à sable).
+
+<Collapsible title="Voir les images">
+    <Figure lightbox>
+        <Figure.Media>
+            <img src={IgSimulable1} alt="Icône et logo de Simulable"/>
+        </Figure.Media>
+        <Figure.Caption>
+            Icône et logo de Simulable
+        </Figure.Caption>
+    </Figure>
+    <Figure lightbox>
+        <Figure.Media>
+            <img src={IgSimulable2} alt="Couleurs et police d'écriture de SimuLABle"/>
+        </Figure.Media>
+        <Figure.Caption>
+            Couleurs et police d'écriture de SimuLABle
+        </Figure.Caption>
+    </Figure>
+</Collapsible>
+<br/>
+
+<u><b>Veille Technologique</b></u><br/>
+Étant responsable de l':term[engine], j'ai accompagné [Noah](#Noah) dans ses études sur la stack technique.
+Écrire notre propre :term[pseudo-langage]{id="pseudo_langage"} de programmation ne semble pas être la meilleure solution.
+En étudiant les possibilités offertes par :term[Rust], nous avons retenu :term[Rhai] pour l'exécution du code provenant des utilisateurs.
+De plus, nous pourrions isoler l'engine sur un deuxième backend, lié au principal, mais effectuant des appels restreints par principe d'étanchéité.
+<br/>
+
+<u><b>Veille Concurrentielle</b></u><br/>
+En effectuant mes recherches, j'ai été surpris de voir qu'il y avait peu de projets similaires, mais qu'aucun n'avait en tête ce que nous voulons accomplir.
+Ce n'est pas très étonnant étant donné que notre projet n'est pas destiné au grand public, mais à un usage pédagogique au sein de l'IUT.
+<br/>
+
+Parmi mes recherches, quelques projets ont retenu mon attention comme Screeps (un "MMO de programmation"),
+NetLogo (qui se rapprocherait le plus de notre aspect pédagogique), ou encore CodinGame, CodeCombat et RoboCode pour le côté "défis"/"classement".
+Il y avait également Leek Wars, proposé par notre professeur et client M. Delavernhe, qui a été la toute première inspiration pour le projet.
+<br/>
+
+<u><b>Veille Financière</b></u><br/>
+Étant donné que le projet développé s'inscrit dans un cadre étudiant et pédagogique, son objectif principal n'est pas commercial.
+Cela n'est pas non plus utile de compter le coût du :term[build], sachant qu'il correspond simplement à notre temps de développement dans le cadre de la SAÉ.
+<br/>
+
+Le principal coût serait celui du :term[run], plus précisément l'hébergement du site.
+Il faut héberger la base de données, les deux backends et les ressources nécessaires à l'exécution des simulations (bien qu'une classe d'élèves devrait suffire si on s'en sort bien).
+<br/>
+
+Cela dit, à plus long terme (si notre projet est un vrai *:term[hit]* et se démocratise au-delà de l'Université de Bourgogne), le projet pourrait toutefois être commercialisé.
+Une piste envisagée serait alors l'adoption d'un modèle :term[freemium]. Les fonctionnalités essentielles resteraient ainsi accessibles gratuitement,
+tandis que certaines fonctionnalités ou capacités avancées pourraient être proposées dans une offre payante.
+<br/>
+
+<u><b>Études :term[Engine]</b></u><br/>
+Ayant déjà beaucoup travaillé sur des projets :term[React] ou :term[TypeScript], ainsi que sur un projet personnel cet été, je suis confiant de pouvoir réaliser l'engine avec ces technologies.
+Mais comme nous sommes en :term[SAÉ] et que le but est d'apprendre, j'ai étudié la possibilité d'utiliser un langage offrant une bonne solidité de code et de bonnes performances en calcul. Après de nombreuses discussions avec Noah, la possibilité d'utiliser Rust et d'interpréter les scripts en Rhai semblait être une bonne solution.
+<br/>
+
+Côté visualisation, mes options étaient :term[PixiJS], :term[ThreeJS] ou mon propre code. Voulant privilégier les performances, les deux outils externes semblent être le meilleur choix.
+Cela dit, ThreeJS étant utile pour le calcul 3D, PixiJS semble être la solution la plus raisonnable.
+<br/>
+
+<u><b>Report Maker</b></u><br/>
+En parallèle, j'ai initialisé un projet React se basant sur le :term[plugin] [vite-plugin-singlefile](https://www.npmjs.com/package/vite-plugin-singlefile).
+Cela permettrait de compiler une page éditable en :term[Markdown] en un unique fichier HTML, à la manière d'un PDF, mais avec la possibilité d'inclure des vidéos et du JavaScript.
+L'idée est de pouvoir écrire du :term[MDX], combinant la simplicité du Markdown avec la capacité de React à produire des composants plaçables comme du HTML.
+<br/>
+
+Noah, étant (comme à son habitude 🙄) mon :term[sparring-partner]{id="sparring_partner"} attitré, a fini par m'accompagner occasionnellement dans le développement.
+<br/>
+
+Le projet est fonctionnel, mais malheureusement pas encore assez optimisé. Le résultat est très plaisant visuellement et permet une rédaction facile, mais pèse encore trop lourd :
+les fichiers produits pèsent en moyenne 15 Mo (aïe !).
+
+:::callout{title="Anecdote" type="info"}
+Il s'agit d'une évolution spirituelle de nos anciennes méthodes pour réaliser nos rapports. L'année dernière, Noah et moi avions fini avec un Markdown de 1 000 lignes, surchargé en CSS et HTML.
+C'était très joli et très complet, mais beaucoup trop long et éprouvant pour être convenablement répété pour d'autres rendus.
+:::
+<br/>
+
+<u><b>Maquettes</b></u><br/>
+Une fois l'identité graphique terminée, je me suis lancé dans le maquettage, en posant les bases des pages et en recevant l'aide de Grigor pour le design basique d'un layout incluant un header et un footer.
+<br/>
+
+<u><b>Document de cadrage</b></u><br/>
+J'ai écrit les parties mentionnées précédemment, à l'exception du Report Maker, car notre rendu était rédigé avec ce dernier.
+<br/>
 
 #### Noah
 
@@ -78,12 +207,6 @@ Pas de réunions, nous nous voyons suffisament durant les cours pour être au co
 #### Grigor
 
 - Redaction document de cadrage
-
-### Autre
-
-#### Rendus
-
-Rendu Document de cadrage
 
 </Collapsible>
 
@@ -129,7 +252,7 @@ Durant cette période, nous avons bien avancé sur nos tâches, compte tenu du t
 | Tâche / Objectif | Responsable | Statut |
 | --- | --- | ---: |
 | Figma | Eliot,Grigor | Terminé |
-| Rapport explicatif BDD | Noah,Grigor | Terminé |
+| Rapport explicatif BDD | Noah, Grigor | Terminé |
 | Diapo stack + support écrit | Grigor | Terminé |
 
 ### Difficultés/Décisions

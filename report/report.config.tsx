@@ -16,7 +16,7 @@ export default defineReport({
       { firstName: "Noah", lastName: "GAUCHE PEREIRA", alias: "ElPotatoCorp", href: "https://github.com/ElPotatoCorp" },
       { firstName: "Grigor", lastName: "Gasparyan", alias: "GG-003", href: "https://github.com/GG-003" }
     ],
-    affiliations: ["élèves BUT Informatique, IUT de Nevers"],
+    affiliations: ["IUT Dijon-Auxerre-Nevers — Département Informatique, site de Nevers"],
     date: "Mercredi 11 Novembre 2026"
   },
 
